@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Frontend Mentor | News homepage - A modern news homepage with a variety of articles and categories."
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header id="header" class="header" data-header>
+      <!-- Mobile Navigation -->
+      <nav class="navigation">
+        <ul>
+          <!-- Logo -->
+          <li>
+            <img
+              src="./assets/images/logo.svg"
+              alt="News homepage logo"
+              aria-label="Home page Logo"
+            />
+          </li>
+          <!-- Menu -->
+          <li>
+            <img
+              src="./assets/images/icon-menu.svg"
+              alt="New homepage menu"
+              role="button"
+              aria-label="Open Navigation menu"
+              data-open-menu
+            />
+          </li>
+        </ul>
+      </nav>
+
+      <menu
+        class="navigation__menu hide"
+        aria-label="Navigation menu"
+        data-overlay
+        aria-expanded="true"
+      >
+        <section
+          data-lay
+          role="button"
+          aria-label="close Navigation menu"
+        ></section>
+        <section class="navigation__menu-list">
+          <section>
+            <div>
+              <img
+                src="./assets/images/icon-menu-close.svg"
+                alt="An x icon to close the menu"
+                role="button"
+                aria-label="Close Navigation menu"
+                data-close-menu
+              />
+            </div>
+          </section>
+
+          <ul data-list role="option">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#section-1">New</a></li>
+            <li><a href="#section-2">Popular</a></li>
+            <li><a href="#section-3">Trending</a></li>
+            <li><a href="#header">Categories</a></li>
+          </ul>
+        </section>
+      </menu>
+
+      <!-- When at the button -->
+      <aside data-moveup>
+        <a role="button" aria-label="Move to home page" href="#header"
+          >&#9650;</a
+        >
+      </aside>
+
+      <!-- Desktop Navigation TODO: -->
+      <nav class="navigation__desktop">
+        <section class="navigation__desktop-logo">
+          <div>
+            <img
+              src="./assets/images/logo.svg"
+              alt="News homepage logo"
+              aria-label="Home page Logo"
+            />
+          </div>
+        </section>
+        <ul data-list-desktop role="option" class="navigation__desktop-list">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#section-1">New</a></li>
+          <li><a href="#section-2">Popular</a></li>
+          <li><a href="#section-3">Trending</a></li>
+          <li><a href="#header">Categories</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <article desktop>
+        <section id="section-1" class="homepage__intro">
+          <section
+            class="fadeInAndOut"
+            data-bg
+            data-bg-mobile="./assets/images/image-web-3-mobile.jpg"
+            data-bg-desktop="./assets/images/image-web-3-desktop.jpg"
+          ></section>
+
+          <aside desktop>
+            <h1>
+              The Bright
+              <span> Future of Web </span>
+              3.0?
+            </h1>
+            <div desktop>
+              <p>
+                We dive into the next evolution of the web that
+                <span> claims to put the power of the platforms back </span>
+                into the hands of the people. But is it really
+                <span> fulfilling its promise? </span>
+              </p>
+              <div>
+                <a aria-label="button for more information" href="#"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <!-- Section-2 -->
+
+        <section id="section-2" class="homepage__new">
+          <!-- 1 -->
+          <h2>New</h2>
+          <aside desktop>
+            <article>
+              <h3>Hydrogen VS Electric Cars</h3>
+              <p>
+                Will ever hydrogen-fueled cars catch up to
+                <span> EVs? </span>
+              </p>
+            </article>
+            <hr />
+            <!-- 2 -->
+            <article>
+              <h3>The Downsides of AI Artistry</h3>
+              <p>
+                What are the possible adverse effects of
+                <span> on-demand AI image generation? </span>
+              </p>
+            </article>
+            <!-- 3 -->
+            <hr />
+            <article>
+              <h3>Is VC Funding Drying Up?</h3>
+              <p>
+                Private funding by VC firms is down 50%
+                <span> YOY. We take a look at what that means. </span>
+              </p>
+            </article>
+          </aside>
+        </section>
+      </article>
+      <!-- Section 3 -->
+      <section id="section-3" class="homepage__trending">
+        <!-- 1 -->
+        <article>
+          <!-- Image -->
+          <section class="homepage__trending-img">
+            <div class="fadeInAndOut">
+              <img
+                class="fade"
+                data-lazy
+                data-src="./assets/images/image-retro-pcs.jpg"
+                alt="An image of a Retro pc"
+              />
+            </div>
+          </section>
+          <!-- Text -->
+          <section class="homepage__trending-caption">
+            <h3>01</h3>
+            <h4>Reviving Retro PCs</h4>
+            <p>
+              What happens when old PCs
+              <span> are given modern upgrades? </span>
+            </p>
+          </section>
+        </article>
+        <!-- 2 -->
+        <article>
+          <!-- Image -->
+          <section class="homepage__trending-img">
+            <div class="fadeInAndOut">
+              <img
+                class="fade"
+                data-lazy
+                data-src="./assets/images/image-top-laptops.jpg"
+                alt="An image of a laptop keybord"
+              />
+            </div>
+          </section>
+          <!-- Text -->
+          <section class="homepage__trending-caption">
+            <h3>02</h3>
+            <h4>Top 10 Laptops of 2022</h4>
+            <p>
+              Our best picks for various
+              <span> needs and budgets. </span>
+            </p>
+          </section>
+        </article>
+        <!-- 3 -->
+        <article>
+          <!-- Image -->
+          <section class="homepage__trending-img">
+            <div class="fadeInAndOut">
+              <img
+                class="fade"
+                data-lazy
+                data-src="./assets/images/image-gaming-growth.jpg"
+                alt="An image of a game controller being thrown up"
+              />
+            </div>
+          </section>
+          <!-- Text -->
+          <section class="homepage__trending-caption">
+            <h3>03</h3>
+            <h4>The Growth of Gaming</h4>
+            <p>
+              How the pandemic has
+              <span> sparked fresh opportunities. </span>
+            </p>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Peter Godspower</a>.
+    </footer>
+  </body>
+</html>
